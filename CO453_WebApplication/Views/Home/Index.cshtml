@@ -1,0 +1,59 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center jumbotron">
+    <h1 class="display-4">CO453 ASP.NET MVC Website</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    
+    @if(ViewBag.Customer != null)
+    {
+        <p>
+            "Welcome Back " & @ViewBag.Customer
+        </p>
+    }
+
+</div>
+<section class="row">
+    <article class="col-lg">
+        <div class="card">
+            <img src="~/images/Food 6.jpg" class="card-img-top" alt="Image of a meal">
+            <div class="card-body">
+                <h5 class="card-title">Step 1 - Select Your Meal</h5>
+                <p class="card-text">
+                    Click here to select your meal from out extensive
+                    range of starters, mains and deserts cooked fresh
+                    by our talented chefs
+                </p>
+                <a class="btn btn-primary float-lg-right" asp-controller="Home" asp-action="Menu">Select Meal</a>
+            </div>
+        </div>
+    </article>
+    <article class="col-lg">
+        <div class="card">
+            <img src="~/images/CP_Avitar.jpg" class="card-img-top" alt="Image of a customer">
+            <div class="card-body">
+                <h5 class="card-title">Step 2 - Enter Your Details</h5>
+                <p class="card-text">
+                    Click here to enter your personal details required
+                    in order to process and deliver your order.
+                </p>
+                <a class="btn btn-success float-lg-right" asp-controller="Home" asp-action="Customer">Enter Details</a>
+            </div>
+        </div>
+    </article>
+
+    <article class="col-lg">
+        <div class="card">
+            <img src="~/images/OnlinePayment.jpg" class="card-img-top" alt="Image of a customer">
+            <div class="card-body">
+                <h5 class="card-title">Step 3 - Pay for Your Order</h5>
+                <p class="card-text">
+                    Click here to enter your personal details required
+                    in order to process and deliver your order.
+                </p>
+                <a href="#" class="btn btn-warning float-lg-right">Pay for Order</a>
+            </div>
+        </div>
+    </article>
+</section>
